@@ -1,0 +1,5 @@
+rootProject.name = 'JavaFXPractice'
+include 'Model'
+include 'Model'
+include 'Model'
+
