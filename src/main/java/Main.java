@@ -57,16 +57,6 @@ public class Main extends Application  {
     }
 
 
-    修改：     build.gradle
-    修改：     src/main/java/Controller/Controller.java
-    修改：     src/main/java/Main.java
-    修改：     src/main/java/Model/City.java
-    修改：     src/main/java/Model/History.java
-    修改：     src/main/java/Model/Message.java
-    修改：     src/main/java/Model/Province.java
-    修改：     src/main/resources/sample.fxml
-
-
     public static void main(String[] args){
         launch(args);
     }

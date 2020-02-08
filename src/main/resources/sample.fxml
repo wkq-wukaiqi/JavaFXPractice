@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
@@ -8,8 +11,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -31,9 +33,6 @@
         </menus>
       </MenuBar>
    </top>
-   <bottom>
-      <HBox prefHeight="33.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
-   </bottom>
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -56,9 +55,18 @@
             <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="69.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="69.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label prefHeight="19.0" prefWidth="81.0" text="确诊：" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -81,12 +89,38 @@
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label prefHeight="19.0" prefWidth="217.0" text="更新时间：" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
+            <JFXTextArea fx:id="dianosedAll" editable="false" prefHeight="26.0" prefWidth="178.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <JFXTextArea fx:id="suspectAll" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <JFXTextArea fx:id="curedAll" editable="false" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <JFXTextArea fx:id="deathAll" GridPane.columnIndex="8" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </center>
+   <bottom>
+      <VBox minHeight="27.0" prefHeight="27.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefHeight="2.0" prefWidth="900.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="updateTime" strokeType="OUTSIDE" strokeWidth="0.0" text="未更新" wrappingWidth="798.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="7.0" top="2.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXButton fx:id="updateEpidemic" onAction="#updateEpidemic" onMouseEntered="#updateMouseEntered" onMouseExited="#updateMouseExited" prefHeight="24.0" prefWidth="151.0" text="点击此处刷新" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
 </BorderPane>
