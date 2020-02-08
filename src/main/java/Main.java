@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -20,13 +22,49 @@ import java.io.IOException;
 public class Main extends Application  {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root=FXMLLoader.load(getClass().getResource("sample.fxml"));
-        Scene scene=new Scene(root,900,600);
+        Parent root=FXMLLoader.load(getClass().getResource("main.fxml"));
+        Scene scene=new Scene(root,200,80);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-
+        Thread thread=new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(2000);
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            try{
+                                Parent root=FXMLLoader.load(getClass().getResource("/sample.fxml"));
+                                Scene scene=new Scene(root,900,600);
+                                Stage newstage=new Stage();
+                                newstage.setScene(scene);
+                                primaryStage.close();
+                                newstage.show();
+                            }catch (IOException e){
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread.start();
     }
 
+
+    修改：     build.gradle
+    修改：     src/main/java/Controller/Controller.java
+    修改：     src/main/java/Main.java
+    修改：     src/main/java/Model/City.java
+    修改：     src/main/java/Model/History.java
+    修改：     src/main/java/Model/Message.java
+    修改：     src/main/java/Model/Province.java
+    修改：     src/main/resources/sample.fxml
 
 
     public static void main(String[] args){
@@ -85,10 +123,4 @@ public class Main extends Application  {
 //        return retBuf.toString();
 //    }
 }
-   .gitignore
-           build.gradle
-           gradle/
-           gradlew
-           gradlew.bat
-           settings.gradle
-           src/
+
