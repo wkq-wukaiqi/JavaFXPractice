@@ -15,6 +15,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Rectangle;
@@ -68,7 +70,7 @@ public class Main extends Application  {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root=FXMLLoader.load(getClass().getResource("sample.fxml"));
-        Scene scene=new Scene(root,900,600);
+        Scene scene=new Scene(root,800,800);
         primaryStage.setScene(scene);
         primaryStage.show();
         Text updateTime=(Text)root.lookup("#updateTime");
@@ -138,28 +140,22 @@ public class Main extends Application  {
         Button button=(Button)event.getSource();
         button.setStyle("-fx-background-color: #00000000");
     }
+
     @FXML
-    public void left(MouseEvent event){
-        Rectangle rectangle=(Rectangle)event.getSource();
-        rectangle.setHeight(250);
-        rectangle.setWidth(300);
+    public void Entered(MouseEvent event){
+        ImageView imageView=(ImageView)event.getSource();
+        imageView.setScaleX(1.2);
+        imageView.setScaleY(1.2);
     }
     @FXML
-    public void right(MouseEvent event){
-        Rectangle rectangle=(Rectangle)event.getSource();
-        rectangle.setWidth(200);
-        rectangle.setHeight(250);
-    }
-    @FXML void leftok(MouseEvent event){
-        Rectangle rectangle=(Rectangle)event.getSource();
-        rectangle.setHeight(200);
-        rectangle.setWidth(284);
+    public void Exited(MouseEvent event){
+        ImageView imageView=(ImageView)event.getSource();
+        imageView.setScaleX(1.0);
+        imageView.setScaleY(1.0);
     }
     @FXML
-    public void rightok(MouseEvent event){
-        Rectangle rectangle=(Rectangle)event.getSource();
-        rectangle.setHeight(200);
-        rectangle.setWidth(172);
+    public void Clicked(MouseEvent event){
+
     }
 //    public static String decode(String unicodeStr) {
 //        if (unicodeStr == null) {
