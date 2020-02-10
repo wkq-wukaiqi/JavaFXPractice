@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
@@ -11,7 +13,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: &quot;#ffffff&quot;;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -33,71 +35,8 @@
         </menus>
       </MenuBar>
    </top>
-   <center>
-      <GridPane BorderPane.alignment="CENTER">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="683.0" minWidth="10.0" prefWidth="448.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="69.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label prefHeight="19.0" prefWidth="81.0" text="确诊：" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <Label prefHeight="19.0" prefWidth="182.0" text="疑似：" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <Label text="治愈：" GridPane.columnIndex="5" GridPane.rowIndex="3">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <Label text="死亡：" GridPane.columnIndex="7" GridPane.rowIndex="3">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <JFXTextArea fx:id="dianosedAll" editable="false" prefHeight="26.0" prefWidth="178.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <JFXTextArea fx:id="suspectAll" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <JFXTextArea fx:id="curedAll" editable="false" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <JFXTextArea fx:id="deathAll" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-         </children>
-      </GridPane>
-   </center>
    <bottom>
-      <VBox minHeight="27.0" prefHeight="27.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+      <VBox minHeight="27.0" prefHeight="27.0" prefWidth="900.0" style="-fx-background-color: e8e8e8;" BorderPane.alignment="CENTER">
          <children>
             <Separator prefHeight="2.0" prefWidth="900.0" />
             <HBox prefHeight="100.0" prefWidth="200.0">
@@ -123,4 +62,271 @@
          </children>
       </VBox>
    </bottom>
+   <center>
+      <ScrollPane fitToWidth="true" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: &quot;#b5b5b550&quot;;" BorderPane.alignment="CENTER">
+         <content>
+            <GridPane prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: white;">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="452.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="683.0" minWidth="10.0" prefWidth="448.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="683.0" minWidth="10.0" prefWidth="448.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="683.0" minWidth="10.0" prefWidth="448.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane prefHeight="116.0" prefWidth="116.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#f04b0047" height="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                        <VBox prefHeight="88.0" prefWidth="116.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fill="#615e5ed8" strokeType="OUTSIDE" strokeWidth="0.0" text="较昨日+" textAlignment="CENTER" wrappingWidth="58.62890625">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dianosedIncr" fill="#ff2c00" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Text fx:id="dianosedAll" fill="#ff2c00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.62890625">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <StackPane prefHeight="43.0" prefWidth="115.0">
+                                 <children>
+                                    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fa5b0f" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                                    <Label alignment="CENTER" prefHeight="44.0" prefWidth="115.0" text="确诊人数">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets />
+                                       </StackPane.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="116.0" prefWidth="116.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ff910a4d" height="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                        <VBox prefHeight="88.0" prefWidth="116.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fill="#615e5ed8" strokeType="OUTSIDE" strokeWidth="0.0" text="较昨日+" textAlignment="CENTER" wrappingWidth="58.62890625">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="suspectIncr" fill="#f25501" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Text fx:id="suspectAll" fill="#f25501" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.62890625">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <StackPane prefHeight="43.0" prefWidth="115.0">
+                                 <children>
+                                    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#f5bf0e" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                                    <Label alignment="CENTER" prefHeight="44.0" prefWidth="115.0" text="疑似人数" textFill="#eeeeee">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets />
+                                       </StackPane.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="116.0" prefWidth="116.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                     <children>
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#00f01834" height="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                        <VBox prefHeight="88.0" prefWidth="116.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fill="#615e5ed8" strokeType="OUTSIDE" strokeWidth="0.0" text="较昨日+" textAlignment="CENTER" wrappingWidth="53.62890625">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="curedIncr" fill="#0fae24" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Text fx:id="curedAll" fill="#0fae24" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.62890625">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <StackPane prefHeight="43.0" prefWidth="115.0">
+                                 <children>
+                                    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#02f5b4f2" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                                    <Label alignment="CENTER" prefHeight="44.0" prefWidth="115.0" text="治愈人数">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets />
+                                       </StackPane.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="116.0" prefWidth="116.0" GridPane.columnIndex="11" GridPane.rowIndex="3">
+                     <children>
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#c7c7c74d" height="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                        <VBox prefHeight="88.0" prefWidth="116.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fill="#615e5ed8" strokeType="OUTSIDE" strokeWidth="0.0" text="较昨日+" textAlignment="CENTER" wrappingWidth="56.62890625" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="deathIncr" fill="#837c7c" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Text fx:id="deathAll" fill="#837c7c" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.62890625">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <StackPane prefHeight="43.0" prefWidth="115.0">
+                                 <children>
+                                    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#c9c8c7f2" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0" />
+                                    <Label alignment="CENTER" prefHeight="44.0" prefWidth="115.0" text="死亡人数">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets />
+                                       </StackPane.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <ImageView fitHeight="555.0" fitWidth="758.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="15">
+                     <image>
+                        <Image url="@../../../../../桌面/地图/Chinamap.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </center>
 </BorderPane>
